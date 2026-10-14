@@ -10,11 +10,10 @@ public class Vigenere {
             if((int)input.charAt(i) >= 65 && (int)input.charAt(i) <= 90){
                 if((int)input.charAt(i) + ((int)verme.charAt(counterVerme) - 65) > 90) {
                     output += (char)((int)input.charAt(i) - (26 - ((int)verme.charAt(counterVerme) - 65)));
-                    counterVerme++;
                 } else {
                     output += (char)((int)input.charAt(i) + ((int)verme.charAt(counterVerme) - 65));
-                    counterVerme++;
                 }
+                counterVerme++;
             } else {
                 output += input.charAt(i);
             }
@@ -30,11 +29,10 @@ public class Vigenere {
             if((int)input.charAt(i) >= 65 && (int)input.charAt(i) <= 90){
                 if((int)input.charAt(i) - ((int)verme.charAt(counterVerme) - 65) < 65) {
                     output += (char)((int)input.charAt(i) + (26 - ((int)verme.charAt(counterVerme) - 65)));
-                    counterVerme++;
                 } else {
                     output += (char)((int)input.charAt(i) - ((int)verme.charAt(counterVerme) - 65));
-                    counterVerme++;
                 }
+                counterVerme++;
             } else {
                 output += input.charAt(i);
             }
